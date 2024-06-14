@@ -3,4 +3,10 @@
 
 {% block content %}
 <h1>Create</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+{{ frm.as_p }}
+    <button type="submit">Submit</button>
+</form>
 {% endblock content %}
